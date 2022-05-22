@@ -23,5 +23,4 @@ public class ProductDto {
     LocalDate validFrom;
     LocalDate validTo;
     String companyName;
-    String typeOfProduct;
 }

@@ -1,7 +1,5 @@
 package com.mirzoyan.eshop.dto;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +17,5 @@ public class TransactionDto {
 
     @JsonIgnore
     private Integer id;
-    LocalDate transactionDate;
-    BigDecimal totalAmount;
     private List<TransactionProductDto> productList = new ArrayList<>();
-
-//    @Valid
-//    @OneToOne(cascade = ALL)
-//    @JoinColumn(name = "user_id")
-//    private User user;
 }

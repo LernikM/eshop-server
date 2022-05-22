@@ -2,7 +2,6 @@ package com.mirzoyan.eshop.domain;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,7 +35,7 @@ public class TransactionProduct {
 
     @NotNull
     @Column(name = "amount")
-    BigDecimal amount;
+    Integer amount;
 
     @NotNull
     @Size(max = 17)
@@ -46,7 +45,7 @@ public class TransactionProduct {
     @NotNull
     @Size(max = 17)
     @Column(name = "calorie")
-    String calorie;
+    Integer calorie;
 
     @NotNull
     @Size(max = 17)
@@ -65,11 +64,6 @@ public class TransactionProduct {
     @NotNull
     @Column(name = "company_name")
     String companyName;
-
-    @Size(max = 255)
-    @NotNull
-    @Column(name = "product_type")
-    String typeOfProduct;
 
     @NotNull
     @Column(name = "count")

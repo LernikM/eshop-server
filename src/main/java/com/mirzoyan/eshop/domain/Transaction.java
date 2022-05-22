@@ -3,8 +3,7 @@ package com.mirzoyan.eshop.domain;
 import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.GenerationType.SEQUENCE;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
@@ -37,11 +36,15 @@ public class Transaction {
 
     @NotNull
     @Column(name = "date")
-    LocalDate transactionDate;
+    LocalDateTime transactionDate;
 
     @NotNull
     @Column(name = "total_amount")
-    BigDecimal totalAmount;
+    Integer totalAmount;
+
+    @NotNull
+    @Column(name = "total_calorie")
+    Integer totalCalorie;
 
     @Valid
     @NotEmpty

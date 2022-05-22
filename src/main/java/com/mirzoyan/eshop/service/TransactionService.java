@@ -1,9 +1,11 @@
 package com.mirzoyan.eshop.service;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 
 import com.mirzoyan.eshop.domain.Transaction;
+import com.mirzoyan.eshop.domain.TransactionProduct;
 import com.mirzoyan.eshop.dto.TransactionDto;
 import com.mirzoyan.eshop.repository.TransactionRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,8 +36,12 @@ public class TransactionService {
      */
     @Transactional
     public TransactionDto create(TransactionDto transactionDto) {
+
         Transaction transaction = modelMapper.map(transactionDto, Transaction.class);
         transaction.setUserId(userDetailsService.getUserId());
+        transaction.setTotalAmount(transaction.getProductList().stream().mapToInt(TransactionProduct::getAmount).sum());
+        transaction.setTotalCalorie(transaction.getProductList().stream().mapToInt(TransactionProduct::getCalorie).sum());
+        transaction.setTransactionDate(LocalDateTime.now());
         transactionRepository.save(transaction);
         return modelMapper.map(transaction, TransactionDto.class);
     }

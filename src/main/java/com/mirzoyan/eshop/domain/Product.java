@@ -61,8 +61,4 @@ public class Product {
     @Column(name = "company_name")
     String companyName;
 
-    @Size(max = 255)
-    @NotNull
-    @Column(name = "product_type")
-    String typeOfProduct;
 }
