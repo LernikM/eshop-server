@@ -29,14 +29,20 @@ public class Product {
     private Integer id;
 
     @NotNull
-    @Size(max = 15)
     @Column(name = "hs_code")
     String hsCode;
 
     @NotNull
-    @Size(max = 17)
-    @Column(name = "company_code")
+    @Column(name = "name")
     String name;
+
+    @NotNull
+    @Column(name = "description")
+    String description;
+
+    @NotNull
+    @Column(name = "cmp_name")
+    String companyName;
 
     @NotNull
     @Size(max = 17)
@@ -44,7 +50,6 @@ public class Product {
     String calorie;
 
     @NotNull
-    @Size(max = 17)
     @Column(name = "country")
     String country;
 
@@ -55,10 +60,4 @@ public class Product {
     @NotNull
     @Column(name = "eov")
     LocalDate validTo;
-
-    @Size(max = 255)
-    @NotNull
-    @Column(name = "company_name")
-    String companyName;
-
 }

@@ -18,9 +18,10 @@ public class ProductDto {
     private Integer id;
     String hsCode;
     String name;
+    String description;
+    String companyName;
     String calorie;
     String country;
     LocalDate validFrom;
     LocalDate validTo;
-    String companyName;
 }

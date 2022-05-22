@@ -17,11 +17,12 @@ public class TransactionProductDto {
     Integer id;
     String hsCode;
     Integer amount;
-    String name;
     String calorie;
     String country;
     LocalDate validFrom;
     LocalDate validTo;
+    String name;
+    String description;
     String companyName;
     int count;
 }

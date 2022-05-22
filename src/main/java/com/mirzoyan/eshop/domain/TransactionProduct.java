@@ -39,8 +39,18 @@ public class TransactionProduct {
 
     @NotNull
     @Size(max = 17)
-    @Column(name = "company_code")
+    @Column(name = "name")
     String name;
+
+    @NotNull
+    @Size(max = 17)
+    @Column(name = "description")
+    String description;
+
+    @NotNull
+    @Size(max = 17)
+    @Column(name = "cmp_name")
+    String companyName;
 
     @NotNull
     @Size(max = 17)
