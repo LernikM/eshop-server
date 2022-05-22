@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.0'
+    id 'org.springframework.boot' version '2.5.6'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id "com.google.cloud.tools.jib" version "3.1.4"
@@ -21,6 +21,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-cache'
     implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.modelmapper:modelmapper:2.4.4'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation 'org.keycloak:keycloak-spring-boot-starter:17.0.1'
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'

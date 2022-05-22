@@ -1,4 +1,4 @@
-package com.mirzoyan.eshop.eshop;
+package com.mirzoyan.eshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
