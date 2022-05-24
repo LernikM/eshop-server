@@ -35,7 +35,9 @@ public class TransactionController {
 
     @PostMapping
     public ResponseEntity<TransactionDto> create(@Valid @RequestBody final List<String> productsList) {
-        return ok(transactionService.create(productsList.stream().map(it->modelMapper.map(productService.get(it), TransactionProduct.class)).toList()));
+        return ok(transactionService.create(productsList.stream()
+            .map(it -> modelMapper.map(productService.get(it), TransactionProduct.class))
+            .toList()));
     }
 
     @GetMapping

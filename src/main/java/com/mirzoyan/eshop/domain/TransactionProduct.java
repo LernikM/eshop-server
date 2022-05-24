@@ -72,8 +72,4 @@ public class TransactionProduct {
     @NotNull
     @Column(name = "eov")
     LocalDate validTo;
-
-    @NotNull
-    @Column(name = "count")
-    int count;
 }

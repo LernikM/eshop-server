@@ -48,14 +48,12 @@ public class ProductController {
     public ResponseEntity<ProductDto> create(@Valid @RequestBody final ProductDto request) {
 
         ProductDto productResponse = productService.create(request);
-        log.debug("Done Create exim, id - {}", productResponse.getId());
         return ok(productResponse);
     }
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<ProductDto> update(@PathVariable("id") final Long id, @Valid @RequestBody final ProductDto request) {
         ProductDto productResponse = productService.update(id, request);
-        log.debug("Done updating exim, id - {}", productResponse.getId());
         return ok(productResponse);
     }
 

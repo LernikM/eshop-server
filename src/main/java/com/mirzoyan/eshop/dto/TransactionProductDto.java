@@ -25,5 +25,4 @@ public class TransactionProductDto {
     String name;
     String description;
     String companyName;
-    int count;
 }

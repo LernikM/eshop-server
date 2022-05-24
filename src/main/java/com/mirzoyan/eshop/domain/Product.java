@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -20,7 +21,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "product")
+@Table(name = "product", uniqueConstraints = @UniqueConstraint(columnNames = {"hs_code"}))
 public class Product {
 
     @Id
@@ -63,8 +64,4 @@ public class Product {
     @NotNull
     @Column(name = "eov")
     LocalDate validTo;
-
-    @NotNull
-    @Column(name = "type")
-    Integer type;
 }
