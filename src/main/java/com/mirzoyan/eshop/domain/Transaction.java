@@ -52,7 +52,7 @@ public class Transaction {
     @NotEmpty
     @OneToMany(cascade = ALL)
     @JoinColumn(name = "transaction_id", nullable = false)
-    private List<Product> productList = new ArrayList<>();
+    private List<TransactionProduct> productList = new ArrayList<>();
 
     @Valid
     @JoinColumn(name = "user_id")
