@@ -16,6 +16,7 @@ public class ProductDto {
 
     @JsonIgnore
     private Integer id;
+    String hsCode;
     String name;
     String description;
     String companyName;
