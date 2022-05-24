@@ -5,9 +5,9 @@ import static org.springframework.http.ResponseEntity.ok;
 import java.util.List;
 import javax.validation.Valid;
 
-import com.mirzoyan.eshop.domain.Transaction;
 import com.mirzoyan.eshop.dto.AllUserTransactionDto;
 import com.mirzoyan.eshop.dto.TransactionDto;
+import com.mirzoyan.eshop.service.ProductService;
 import com.mirzoyan.eshop.service.TransactionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,10 +28,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Validated
 public class TransactionController {
     private final TransactionService transactionService;
+    private final ProductService productService;
 
     @PostMapping
-    public ResponseEntity<TransactionDto> create(@Valid @RequestBody final TransactionDto request) {
-        return ok(transactionService.create(request));
+    public ResponseEntity<TransactionDto> create(@Valid @RequestBody final List<String> productsList) {
+        return ok(transactionService.create(productsList.stream().map(productService::get).toList()));
     }
 
     @GetMapping

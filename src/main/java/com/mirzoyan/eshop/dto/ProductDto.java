@@ -16,12 +16,12 @@ public class ProductDto {
 
     @JsonIgnore
     private Integer id;
-    String hsCode;
     String name;
     String description;
     String companyName;
     Integer calorie;
     Integer mass;
+    Integer amount;
     String country;
     LocalDate validFrom;
     LocalDate validTo;

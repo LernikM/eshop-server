@@ -47,6 +47,9 @@ public class Product {
     @Column(name = "calorie")
     Integer calorie;
 
+    @Column(name = "amount")
+    Integer amount;
+
     @Column(name = "mass")
     Integer mass;
 

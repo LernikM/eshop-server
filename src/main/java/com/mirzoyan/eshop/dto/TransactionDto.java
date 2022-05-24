@@ -17,5 +17,5 @@ public class TransactionDto {
 
     @JsonIgnore
     private Integer id;
-    private List<TransactionProductDto> productList = new ArrayList<>();
+    private List<ProductDto> productList = new ArrayList<>();
 }
