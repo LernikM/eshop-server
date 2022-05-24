@@ -53,9 +53,12 @@ public class TransactionProduct {
     String companyName;
 
     @NotNull
-    @Size(max = 17)
     @Column(name = "calorie")
     Integer calorie;
+
+    @NotNull
+    @Column(name = "mass")
+    Integer mass;
 
     @NotNull
     @Size(max = 17)
@@ -69,11 +72,6 @@ public class TransactionProduct {
     @NotNull
     @Column(name = "eov")
     LocalDate validTo;
-
-    @Size(max = 255)
-    @NotNull
-    @Column(name = "company_name")
-    String companyName;
 
     @NotNull
     @Column(name = "count")

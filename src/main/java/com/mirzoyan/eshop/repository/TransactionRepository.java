@@ -7,5 +7,5 @@ import com.mirzoyan.eshop.domain.Transaction;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TransactionRepository extends CrudRepository<Transaction, Long> {
-    Optional<List<Transaction>> findAllByUserId(String userId);
+    List<Transaction> findAllByUserId(String userId);
 }

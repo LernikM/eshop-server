@@ -42,9 +42,11 @@ public class Transaction {
     @Column(name = "total_amount")
     Integer totalAmount;
 
-    @NotNull
     @Column(name = "total_calorie")
     Integer totalCalorie;
+
+    @Column(name = "total_mass")
+    Integer totalMass;
 
     @Valid
     @NotEmpty

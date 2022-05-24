@@ -20,8 +20,10 @@ public class ProductDto {
     String name;
     String description;
     String companyName;
-    String calorie;
+    Integer calorie;
+    Integer mass;
     String country;
     LocalDate validFrom;
     LocalDate validTo;
+    Integer type;
 }

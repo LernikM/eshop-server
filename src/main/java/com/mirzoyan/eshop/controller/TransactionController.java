@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import com.mirzoyan.eshop.domain.Transaction;
+import com.mirzoyan.eshop.dto.AllUserTransactionDto;
 import com.mirzoyan.eshop.dto.TransactionDto;
 import com.mirzoyan.eshop.service.TransactionService;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +35,7 @@ public class TransactionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Transaction>> getAll() {
+    public ResponseEntity<List<AllUserTransactionDto>> getAll() {
         return ok(transactionService.findAllByUserId());
     }
 

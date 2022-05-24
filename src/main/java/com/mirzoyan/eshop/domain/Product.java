@@ -44,10 +44,11 @@ public class Product {
     @Column(name = "cmp_name")
     String companyName;
 
-    @NotNull
-    @Size(max = 17)
     @Column(name = "calorie")
-    String calorie;
+    Integer calorie;
+
+    @Column(name = "mass")
+    Integer mass;
 
     @NotNull
     @Column(name = "country")
@@ -60,4 +61,8 @@ public class Product {
     @NotNull
     @Column(name = "eov")
     LocalDate validTo;
+
+    @NotNull
+    @Column(name = "type")
+    Integer type;
 }

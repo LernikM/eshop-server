@@ -17,7 +17,8 @@ public class TransactionProductDto {
     Integer id;
     String hsCode;
     Integer amount;
-    String calorie;
+    Integer calorie;
+    Integer mass;
     String country;
     LocalDate validFrom;
     LocalDate validTo;
